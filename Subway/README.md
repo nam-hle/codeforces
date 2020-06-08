@@ -13,23 +13,23 @@ Print n numbers. Separate the numbers by spaces, the i-th one should be equal to
 ## Examples
 
 ### Input
-`4\
+4\
 1 3\
 4 3\
 4 2\
-1 2`
+1 2
 
 ### Output
 0 0 0 0
 
 ### Input
-`6\
+6\
 1 2\
 3 4\
 6 4\
 2 3\
 1 3\
-3 5`
+3 5
 ### Output
 0 0 0 1 1 2
 
