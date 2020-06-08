@@ -1,4 +1,6 @@
-# Description
+From [Codeforces Beta Round #95 (Div. 2)](http://codeforces.com/contest/131)
+
+## Description
 A subway scheme, classic for all Berland cities is represented by a set of n stations connected by n passages, each of which connects exactly two stations and does not pass through any others. Besides, in the classic scheme one can get from any station to any other one along the passages. The passages can be used to move in both directions. Between each pair of stations there is no more than one passage.
 
 Berland mathematicians have recently proved a theorem that states that any classic scheme has a ringroad. There can be only one ringroad. In other words, in any classic scheme one can find the only scheme consisting of stations (where any two neighbouring ones are linked by a passage) and this cycle doesn't contain any station more than once.
@@ -32,5 +34,3 @@ Print n numbers. Separate the numbers by spaces, the i-th one should be equal to
 3 5
 ### Output
 0 0 0 1 1 2
-
-
