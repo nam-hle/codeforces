@@ -23,12 +23,12 @@ Print n numbers. Separate the numbers by spaces, the i-th one should be equal to
 0 0 0 0
 
 ### Input
-6
-1 2
-3 4
-6 4
-2 3
-1 3
+6\
+1 2\
+3 4\
+6 4\
+2 3\
+1 3\
 3 5
 ### Output
 0 0 0 1 1 2
