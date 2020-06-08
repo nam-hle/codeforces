@@ -19,48 +19,65 @@ typedef vector<string> vs;
 #define pb push_back
 #define eb emplace_back
 
-const int MAXN = 3005;
+inline int read() {
+    int x = 0, f = 1;
+    char ch = 0;
+    for (;!isdigit(ch); ch = getchar()) if (ch == '-') f = -1;
+    for (;isdigit(ch); ch = getchar()) x = x * 10 + ch - 48;
+    return x * f;
+}
 
-int n, x, y, d[MAXN];
-vi adj[MAXN], path;
-bool vis[MAXN], ringroad[MAXN], found;
+const int MAXN = 2e5 + 5;
+
+struct node {
+    int ne,to;
+} e[MAXN << 1];
+
+int nume, n, x,y, b[MAXN], he[MAXN], curMin;
+vi res;
+inline void addside(int u,int v) {
+    e[++nume].ne = he[u]; e[nume].to = v; he[u] = nume;
+}
 
 void dfs(int u, int pre) {
-    path.pb(u);
-    vis[u]=1;
-    fa(v, adj[u])
-    if (v!=pre) {
-        if (found) continue;
-        if (vis[v]) {
-            found = 1;
-            REPR(i, sz(path)-1, 0) {
-                ringroad[path[i]] = 1;
-                if (path[i]==v) break;
-            }
-        } else
-            dfs(v, u);
+    for (int i = he[u]; i; i = e[i].ne) {
+        int v = e[i].to, w = abs(v);
+        if (w!=pre) {
+            dfs(w, u);
+            b[u]+= b[w] + (v<0);
+        }
     }
-    path.pop_back();
 }
 
 void dfs2(int u, int pre) {
-    fa(v, adj[u])
-        if (!ringroad[v] and v!=pre)
-            d[v] = d[u]+1, dfs2(v, u);
+    for (int i = he[u]; i; i = e[i].ne) {
+        int v = e[i].to, w = abs(v);
+        if (w!=pre) {
+            b[w] = b[u] + (v>0?1:-1);
+            if (b[w]==curMin)
+                res.pb(w);
+            else if (b[w]<curMin)
+                curMin = b[w],
+                res.clear(),
+                res.pb(w);
+            dfs2(w, u);
+        }
+    }
 }
 
 int main() {
     std::ios::sync_with_stdio(false);
-    cin >> n;
-    REP(_, 1, n)
-        cin >> x >> y, adj[x].pb(y), adj[y].pb(x);
-
+    n = read();
+    REP(_, 1, n-1) {
+        x = read(), y = read();
+        addside(x, y);
+        addside(y, -x);
+    }
     dfs(1, 1);
-
-    REP(u, 1, n)
-        if (ringroad[u])
-            dfs2(u, u);
-
-    REP(i, 1, n)
-        cout << d[i] << " ";
+    curMin = b[1];
+    res.pb(1);
+    dfs2(1, 1);
+    cout << curMin << endl;
+    sort(all(res));
+    fa(i, res) cout << i << " ";
 }
