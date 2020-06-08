@@ -1,8 +1,8 @@
 From [Codeforces Beta Round #135 (Div. 2)](http://codeforces.com/contest/219)
 
 ## Perfomance Analysis
-|                   | Constraint    | My Solution |
-| ------------------|:--------------|:------------|
+|  Table            | Constraint    | My Solution |
+| ----------------- |:------------- |:----------- |
 | Time limit (ms)   | 2000          | 46          |
 | Memory limit (kB) | 256k          | 3k          |
 
