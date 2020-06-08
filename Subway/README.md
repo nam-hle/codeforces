@@ -13,11 +13,11 @@ Print n numbers. Separate the numbers by spaces, the i-th one should be equal to
 ## Examples
 
 ### Input
-4
+`4
 1 3
 4 3
 4 2
-1 2
+1 2`
 
 ### Output
 0 0 0 0
