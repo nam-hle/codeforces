@@ -14,10 +14,15 @@ Print n numbers. Separate the numbers by spaces, the i-th one should be equal to
 
 ### Input
 4
+
 1 3
+
 4 3
+
 4 2
+
 1 2
+
 ### Output
 0 0 0 0
 
@@ -31,7 +36,5 @@ Print n numbers. Separate the numbers by spaces, the i-th one should be equal to
 3 5
 ### Output
 0 0 0 1 1 2
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+
+
