@@ -1,10 +1,10 @@
 [Submission](http://codeforces.com/contest/219/submission/45204777) for [Codeforces Beta Round #135 (Div. 2)](http://codeforces.com/contest/219)
 
 ## Performance Analysis
-|  Table            | Constraint    | My Solution |
+|  Constraint            | Limit    | My Solution |
 | ----------------- |:------------- |:----------- |
-| Time limit (ms)   | 3000          | 340          |
-| Memory limit (kB) | 256k          | 13k          |
+| Time (ms)   | 3000          | 340          |
+| Memory (kB) | 256k          | 13k          |
 
 ## Description
 The country Treeland consists of n cities, some pairs of them are connected with unidirectional roads. Overall there are n - 1 roads in the country. We know that if we don't take the direction of the roads into consideration, we can get from any city to any other one.
