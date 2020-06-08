@@ -1,4 +1,10 @@
-From [Codeforces Beta Round #95 (Div. 2)](http://codeforces.com/contest/131)
+[Submission](http://codeforces.com/contest/131/submission/45205648) for [Codeforces Beta Round #95 (Div. 2)](http://codeforces.com/contest/131)
+
+## Performance Analysis
+|  Table            | Constraint    | My Solution |
+| ----------------- |:------------- |:----------- |
+| Time limit (ms)   | 2000          | 62          |
+| Memory limit (kB) | 256k          | 372         |
 
 ## Description
 A subway scheme, classic for all Berland cities is represented by a set of n stations connected by n passages, each of which connects exactly two stations and does not pass through any others. Besides, in the classic scheme one can get from any station to any other one along the passages. The passages can be used to move in both directions. Between each pair of stations there is no more than one passage.
